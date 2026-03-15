@@ -10,9 +10,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Jenkins usually handles the checkout automatically if configured via "Pipeline from SCM"
-                // But including it explicitly for clarity or manual trigger
-                checkout scm
+                git branch: 'main', url: 'https://github.com/Sanjayan7/Contact_List.git'
             }
         }
 
